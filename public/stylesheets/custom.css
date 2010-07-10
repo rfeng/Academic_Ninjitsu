@@ -1,0 +1,36 @@
+.container {
+	width: 710px;
+}
+
+body {
+	background: #ff9;
+}
+
+#header {
+	padding-top: 10px;
+}
+
+
+
+#content {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	background: #999;
+}
+
+a {
+	color: #09c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #069;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #069;
+}
+
+

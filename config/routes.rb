@@ -1,4 +1,23 @@
 ActionController::Routing::Routes.draw do |map|
+
+	map.resources :users
+		map.signup '/signup', :controller => 'users', :action => 'new'
+			signup_path = '/signup'
+
+	map.resources :sessions, :only => [:new, :create, :destroy]
+		map.signin '/signin', :controller => 'sessions', :action => 'new'
+			signin_path = '/signin'
+		map.signout '/signout', :controller => 'sessions', :action => 'destroy'
+
+	map.root :controller => 'pages', :action => 'home'
+		root_path = '/'
+	map.about '/about', :controller => 'pages', :action => 'about'
+		about_path = '/about'
+	map.contact '/contact', :controller => 'pages', :action => 'contact'
+		contact_path = '/contact'
+	map.help '/help', :controller => 'pages', :action => 'help'
+		help_path = '/help'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
